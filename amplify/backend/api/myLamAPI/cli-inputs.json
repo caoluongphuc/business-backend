@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "paths": {
+    "/woohoo": {
+      "name": "/woohoo",
+      "lambdaFunction": "myLamAPIFunc",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/test/call": {
+      "name": "/test/call",
+      "lambdaFunction": "myLamAPIFunc",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

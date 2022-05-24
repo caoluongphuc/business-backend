@@ -1,0 +1,57 @@
+type DeviceType @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  deviceType: String
+  Devices: [Device] @hasMany(indexName: "byDeviceType", fields: ["id"])
+}
+
+type Brand @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  brandNameVi: String
+  brandNameEn: String
+  Devices: [Device] @hasMany(indexName: "byBrand", fields: ["id"])
+}
+
+type Booking @model @auth(rules: [{allow: public}]) {
+  id: ID!
+}
+
+type Device @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  deviceNameVi: String
+  deviceNameEn: String
+  devicetypeID: ID! @index(name: "byDeviceType")
+  brandID: ID! @index(name: "byBrand")
+  roomID: ID! @index(name: "byRoom")
+  solutionID: ID! @index(name: "bySolution")
+}
+
+type Room @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roomNameVi: String
+  Devices: [Device] @hasMany(indexName: "byRoom", fields: ["id"])
+  roomNameEn: String
+}
+
+type Solution @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  solutionNameVi: String
+  solutionNameEn: String
+  Devices: [Device] @hasMany(indexName: "bySolution", fields: ["id"])
+  houseID: ID! @index(name: "byHouse")
+}
+
+type House @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  houseNameVi: String
+  houseNameEn: String
+  serviceID: ID! @index(name: "byService")
+  Solutions: [Solution] @hasMany(indexName: "byHouse", fields: ["id"])
+}
+
+type Service @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  serviceNameVi: String
+  Houses: [House] @hasMany(indexName: "byService", fields: ["id"])
+  serviceNameEn: String
+}
+ 

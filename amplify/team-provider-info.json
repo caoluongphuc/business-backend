@@ -1,0 +1,35 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-slivingvn-staging-51329-authRole",
+      "UnauthRoleArn": "arn:aws:iam::858763302989:role/amplify-slivingvn-staging-51329-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::858763302989:role/amplify-slivingvn-staging-51329-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-slivingvn-staging-51329-deployment",
+      "UnauthRoleName": "amplify-slivingvn-staging-51329-unauthRole",
+      "StackName": "amplify-slivingvn-staging-51329",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:858763302989:stack/amplify-slivingvn-staging-51329/1550ceb0-da57-11ec-9a03-06eae8c01eb8",
+      "AmplifyAppId": "d3bck3vde3a7x0",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-slivingvn-staging-51329-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "slivingvn": {}
+      },
+      "function": {
+        "slivingvn993cd620": {
+          "deploymentBucketName": "amplify-slivingvn-staging-51329-deployment",
+          "s3Key": "amplify-builds/slivingvn993cd620-2b6f4e6954676e7a2b53-build.zip"
+        },
+        "myLamAPIFunc": {
+          "deploymentBucketName": "amplify-slivingvn-staging-51329-deployment",
+          "s3Key": "amplify-builds/myLamAPIFunc-366b6b6b415147716835-build.zip"
+        },
+        "packageFunc": {
+          "deploymentBucketName": "amplify-slivingvn-staging-51329-deployment",
+          "s3Key": "amplify-builds/packageFunc-5a4b397170647559435a-build.zip"
+        }
+      }
+    }
+  }
+}

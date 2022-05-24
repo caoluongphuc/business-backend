@@ -1,0 +1,26 @@
+{
+  "resourceName": "dynamo2c1d4f3e",
+  "tableName": "dynamo2c1d4f3e",
+  "partitionKey": {
+    "fieldName": "test",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "test2",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "test",
+      "partitionKey": {
+        "fieldName": "test",
+        "fieldType": "string"
+      },
+      "sortKey": {
+        "fieldName": "test2",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}
